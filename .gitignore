@@ -1,0 +1,19 @@
+# Global Environment Variables 
+.env 
+.env.example
+
+# Service Dependencies 
+node_modules/
+jspm_packages/
+
+# Build Outputs
+dist/
+build/
+out/
+*.log 
+
+# OS Metadata and ISEs 
+.DS_Store 
+Thumbs.db 
+.vscode/
+.idea/
