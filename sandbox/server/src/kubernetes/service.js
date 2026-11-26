@@ -1,4 +1,4 @@
-import { k8cCoreV1Api } from "./config.js";
+import { k8sCoreV1Api } from "./config.js";
 export const createService = async (sandboxId) =>{
     const serviceManifest = {
         metadata : {
@@ -27,7 +27,7 @@ export const createService = async (sandboxId) =>{
 
 
 
-const response = await k8cCoreV1Api.createNamespacedService({
+const response = await k8sCoreV1Api.createNamespacedService({
     namespace: 'default',
     body: serviceManifest
 })
