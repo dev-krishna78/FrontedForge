@@ -15,13 +15,13 @@ export async function createPod(sandboxId){
                 {
                     image: "template",
                     imagePullPolicy: "IfNotPresent",
-                    name: 'sandbox-container ',
+                    name: 'sandbox-container',
                     ports: [{ containerPort : 5173 ,name : "http"
 
                     }],
                     resources:{
-                        limits: {cpu : "500m ", memory: "1Gi"},
-                        requests: { cpu: "250m", memory: "5000Mi"}
+                        limits: {cpu : "500m", memory: "1Gi"},
+                        requests: { cpu: "250m", memory: "500Mi"}
                     }
                 }
             ]
@@ -30,10 +30,10 @@ export async function createPod(sandboxId){
 
 
 
-const response = await k8sCoreV1Api.createNamespacePod({
-    namespace: 'default',
-    body: podManifest
-})
+const response = await k8sCoreV1Api.createNamespacedPod({
+        namespace: 'default',
+        body: podManifest
+    })
 
 
 return response;

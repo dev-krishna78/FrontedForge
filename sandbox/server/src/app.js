@@ -18,7 +18,7 @@ app.get("/api/sandbox/health",(req,res)=>{
     });
 })
 
-
+console.log("Sandbox start route loaded");
 app.post("/api/sandbox/start", async (req, res) => {
 
     const sandboxId = uuid();
