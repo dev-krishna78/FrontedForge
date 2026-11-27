@@ -1,7 +1,7 @@
 # Global Environment Variables 
 .env 
 .env.example
-
+*.tar
 # Service Dependencies 
 node_modules/
 jspm_packages/
